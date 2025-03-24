@@ -2,14 +2,14 @@
 .navbar {
     background-color: #222;
     padding: 15px 0;
-    position: fixed;
+    position: fixed; /* Fixera navbaren till toppen */
     top: 0;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
-    z-index: 1000;
+    z-index: 1000; /* Se till att navbaren ligger ovanpå annat innehåll */
 }
 
 .menu {
@@ -53,19 +53,6 @@
     background-color: #ff6600;
 }
 
-/* Se till att navbaren fungerar korrekt */
-.navbar ul { 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 0;
-}
-
-.navbar li {
-    list-style: none;
-}
-
 /* Gör navbaren mer responsiv */
 @media (max-width: 768px) {
     .menu {
@@ -77,3 +64,68 @@
         font-size: 16px;
     }
 }
+
+/* Se till att startsidan texten inte döljs av navbaren */
+body {
+    margin: 0;
+    padding-top: 80px; /* Gör så att content inte täcks av navbaren */
+    font-family: 'Roboto', sans-serif; /* Mer elegant typsnitt */
+    line-height: 1.6;
+    background-color: #fafafa; /* Ljus bakgrund för att ge bättre kontrast till texten */
+}
+
+/* Startsidan text */
+.welcome {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+    min-height: 100vh; /* Se till att innehållet täcker hela skärmen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.welcome h1 {
+    font-size: 3rem; /* Större rubrik */
+    margin-bottom: 20px;
+    color: #222;
+    font-weight: 700;
+}
+
+.welcome p {
+    font-size: 1.5rem; /* Större textstorlek för brödtext */
+    color: #444;
+    margin: 10px 0;
+    line-height: 1.8;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Foten längst ned på sidan */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Justering av footer för bättre visning */
+footer p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Responsivitet för skärmstorlekar under 768px */
+@media (max-width: 768px) {
+    .welcome h1 {
+        font-size: 2.5rem;
+    }
+    .welcome p {
+        font-size: 1.2rem;
+    }
+}
+
