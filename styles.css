@@ -71,23 +71,24 @@ body {
     padding-top: 80px; /* Gör så att content inte täcks av navbaren */
     font-family: 'Roboto', sans-serif; /* Mer elegant typsnitt */
     line-height: 1.6;
-    background-color: #fafafa; /* Ljus bakgrund för att ge bättre kontrast till texten */
+    background-color: #1e2a47; /* Mörk blå bakgrund för en professionell och lugn känsla */
 }
 
 /* Startsidan text */
 .welcome {
     padding: 40px 20px;
     text-align: center;
-    background-color: #fff;
+    background-color: #f7f7f7; /* Ljusare bakgrund för texten */
     min-height: 100vh; /* Se till att innehållet täcker hela skärmen */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start; /* Flytta upp texten närmare navbaren */
+    margin-top: 0; /* Ingen extra marginal ovanför startsidan */
 }
 
 .welcome h1 {
     font-size: 3rem; /* Större rubrik */
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Mindre mellanrum mellan rubrik och text */
     color: #222;
     font-weight: 700;
 }
@@ -108,7 +109,7 @@ footer {
     padding: 20px;
     background-color: #222;
     color: white;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
 }
@@ -128,4 +129,54 @@ footer p {
         font-size: 1.2rem;
     }
 }
+
+/* Training Schedule Styling */
+.training-schedule {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.day, .rest-day {
+    background-color: #292929;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+}
+
+.day h3, .rest-day h3 {
+    color: #ff4500;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.day ul, .diet-plan ul {
+    list-style: none;
+    padding: 0;
+}
+
+.day ul li, .diet-plan ul li {
+    font-size: 1.2rem;
+    background-color: #1c1c1c;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+/* Diet Plan Styling */
+.diet-plan {
+    background-color: #292929;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.diet-plan ul {
+    padding: 0;
+}
+
+
 
