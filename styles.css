@@ -2,16 +2,25 @@
 .navbar {
     background-color: #222;
     padding: 15px 0;
-    position: fixed; /* Fixera navbaren till toppen */
+    position: fixed;
     top: 0;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
-    z-index: 1000; /* Se till att navbaren ligger ovanpå annat innehåll */
+    z-index: 1000;
 }
 
+/* Se till att all text inte trycks åt vänster */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center; /* Centrerar texten */
+}
+
+/* Menyinställningar */
 .menu {
     list-style: none;
     display: flex;
@@ -42,7 +51,7 @@
     color: #000;
 }
 
-/* Styla Startmenu-knappen för att sticka ut */
+/* Styla Startmenu-knappen */
 .startmenu {
     background-color: #ff4500;
     color: #000;
@@ -53,7 +62,7 @@
     background-color: #ff6600;
 }
 
-/* Gör navbaren mer responsiv */
+/* Responsivitet */
 @media (max-width: 768px) {
     .menu {
         flex-wrap: wrap;
@@ -65,69 +74,23 @@
     }
 }
 
-/* Se till att startsidan texten inte döljs av navbaren */
+/* Se till att innehåll inte döljs av navbaren */
 body {
     margin: 0;
-    padding-top: 80px; /* Gör så att content inte täcks av navbaren */
-    font-family: 'Roboto', sans-serif; /* Mer elegant typsnitt */
+    padding-top: 100px; /* Ökar padding så inget göms under navbaren */
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: #1e2a47; /* Mörk blå bakgrund för en professionell och lugn känsla */
-}
-
-/* Startsidan text */
-.welcome {
-    padding: 40px 20px;
-    text-align: center;
-    background-color: #f7f7f7; /* Ljusare bakgrund för texten */
-    min-height: 100vh; /* Se till att innehållet täcker hela skärmen */
+    background-color: #1e2a47;
+    overflow-y: auto;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Flytta upp texten närmare navbaren */
-    margin-top: 0; /* Ingen extra marginal ovanför startsidan */
 }
 
-.welcome h1 {
-    font-size: 3rem; /* Större rubrik */
-    margin-bottom: 15px; /* Mindre mellanrum mellan rubrik och text */
-    color: #222;
-    font-weight: 700;
-}
-
-.welcome p {
-    font-size: 1.5rem; /* Större textstorlek för brödtext */
-    color: #444;
-    margin: 10px 0;
-    line-height: 1.8;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Foten längst ned på sidan */
-footer {
+/* Se till att all text i träningsschemat är centrerad och synlig */
+h1, h2, h3, p {
+    color: #f7f7f7; /* Gör all text ljusare för bättre synlighet */
     text-align: center;
-    padding: 20px;
-    background-color: #222;
-    color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Justering av footer för bättre visning */
-footer p {
-    font-size: 1rem;
-    margin: 0;
-}
-
-/* Responsivitet för skärmstorlekar under 768px */
-@media (max-width: 768px) {
-    .welcome h1 {
-        font-size: 2.5rem;
-    }
-    .welcome p {
-        font-size: 1.2rem;
-    }
 }
 
 /* Training Schedule Styling */
@@ -136,33 +99,52 @@ footer p {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
+/* Styling för varje dag */
 .day, .rest-day {
     background-color: #292929;
     padding: 20px;
     border-radius: 8px;
-    width: 300px;
+    width: 350px;
     text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
 }
 
+/* Rubriker och text i träningsschema */
 .day h3, .rest-day h3 {
     color: #ff4500;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
 }
 
+/* Lista justeringar */
 .day ul, .diet-plan ul {
     list-style: none;
     padding: 0;
+    text-align: center;
 }
 
+/* Ökad kontrast på träningspunkter */
 .day ul li, .diet-plan ul li {
     font-size: 1.2rem;
     background-color: #1c1c1c;
-    padding: 10px;
+    padding: 12px;
     border-radius: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+/* Ändrar "Finisher"-stylingen för synlighet */
+.finisher {
+    background-color: #ff4500 !important;
+    color: #000 !important;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 5px;
 }
 
 /* Diet Plan Styling */
@@ -172,11 +154,23 @@ footer p {
     border-radius: 8px;
     margin-top: 20px;
     text-align: center;
+    width: 80%;
+    margin: 20px auto;
 }
 
-.diet-plan ul {
-    padding: 0;
+/* Fixar scrolling-problemet */
+html, body {
+    height: 100%;
+    overflow-y: scroll;
 }
 
-
-
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}
