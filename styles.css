@@ -204,3 +204,83 @@ footer {
     color: #f7f7f7;
 }
 
+/* Specifik styling för Kratos sidan */
+.character-section {
+    text-align: center;
+    margin-top: 60px;
+    padding: 20px;
+    background-color: #292929;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    color: #f7f7f7;
+}
+
+.character-image {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.training-schedule {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.day {
+    background-color: #292929;
+    padding: 20px;
+    border-radius: 8px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.day h3 {
+    color: #ff4500;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.day ul li {
+    font-size: 1.2rem;
+    background-color: #1c1c1c;
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.diet-plan {
+    background-color: #292929;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.diet-plan ul li {
+    font-size: 1.2rem;
+    background-color: #1c1c1c;
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+/* Specific Styling for "Finisher" Section */
+.finisher {
+    background-color: #ff4500 !important;
+    color: #000 !important;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 5px;
+}
+
