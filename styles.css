@@ -1,4 +1,23 @@
-/* Styla navbar */
+/* === Global Styling === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding-top: 100px; /* Undvik att navbar täcker innehåll */
+    background-color: #1e2a47;
+    color: #f7f7f7;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* === Navbar === */
 .navbar {
     background-color: #222;
     padding: 15px 0;
@@ -7,26 +26,14 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
     z-index: 1000;
 }
 
-/* Se till att all text inte trycks åt vänster */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center; /* Centrerar texten */
-}
-
-/* Menyinställningar */
 .menu {
     list-style: none;
     display: flex;
     gap: 20px;
-    padding: 0;
-    margin: 0;
 }
 
 .menu li {
@@ -43,7 +50,6 @@
     font-weight: bold;
     text-transform: uppercase;
     font-size: 18px;
-    display: block;
 }
 
 .menu a:hover {
@@ -51,185 +57,67 @@
     color: #000;
 }
 
-/* Styla Startmenu-knappen */
+/* === Startmenu Button === */
 .startmenu {
     background-color: #ff4500;
     color: #000;
     font-weight: bold;
+    padding: 15px 25px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .startmenu:hover {
     background-color: #ff6600;
 }
 
-/* Responsivitet */
-@media (max-width: 768px) {
-    .menu {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .menu a {
-        padding: 10px 15px;
-        font-size: 16px;
-    }
-}
-
-/* Se till att innehåll inte döljs av navbaren */
-body {
-    margin: 0;
-    padding-top: 100px; /* Ökar padding så inget göms under navbaren */
-    padding-bottom: 60px; /* Se till att foten inte täcker innehållet */
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    background-color: #1e2a47;
-    overflow-y: auto;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Se till att all text i träningsschemat är centrerad och synlig */
-h1, h2, h3, p {
-    color: #f7f7f7; /* Gör all text ljusare för bättre synlighet */
-    text-align: center;
-}
-
-/* Training Schedule Styling */
-.training-schedule {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    text-align: center;
-    margin: 0 auto;
+/* === Welcome Section === */
+.welcome {
+    padding: 50px 0;
     max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Styling för varje dag */
-.day, .rest-day {
-    background-color: #292929;
-    padding: 20px;
-    border-radius: 8px;
-    width: 350px;
-    text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
-}
-
-/* Rubriker och text i träningsschema */
-.day h3, .rest-day h3 {
-    color: #ff4500;
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-}
-
-/* Lista justeringar */
-.day ul, .diet-plan ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-}
-
-/* Ökad kontrast på träningspunkter */
-.day ul li, .diet-plan ul li {
-    font-size: 1.2rem;
-    background-color: #1c1c1c;
-    padding: 12px;
-    border-radius: 5px;
-    margin-bottom: 8px;
-    color: #ffffff;
-}
-
-/* Ändrar "Finisher"-stylingen för synlighet */
-.finisher {
-    background-color: #ff4500 !important;
-    color: #000 !important;
-    font-weight: bold;
-    padding: 12px;
-    border-radius: 5px;
-}
-
-/* Diet Plan Styling */
-.diet-plan {
-    background-color: #292929;
-    padding: 20px;
-    border-radius: 8px;
-    margin-top: 20px;
-    text-align: center;
-    width: 80%;
-    margin: 20px auto;
-}
-
-/* Fixar scrolling-problemet */
-html, body {
-    height: 100%;
-    overflow-y: scroll;
-}
-
-/* Footer - Fixad längst ner */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #222;
-    color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Justera textstorleken för startsidan */
 .welcome h1 {
-    font-size: 3rem; /* Större rubriktext */
+    font-size: 3rem;
     margin-bottom: 20px;
 }
 
 .welcome p {
-    font-size: 1.5rem; /* Större text för stycken */
+    font-size: 1.5rem;
     line-height: 1.8;
-    margin-bottom: 20px;
-}
-
-/* Justera så texten täcker mer utrymme */
-.welcome {
-    padding: 50px 0;
-    text-align: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Justera så texten inte blir för liten */
-.welcome h1, .welcome p {
-    font-size: 2rem;
     max-width: 900px;
-    margin: 0 auto;
-    color: #f7f7f7;
+    margin: 0 auto 20px;
 }
 
-/* Specifik styling för Kratos sidan */
+/* === Character Page Layout === */
 .character-section {
     text-align: center;
-    margin-top: 60px;
-    padding: 20px;
-    background-color: #1e2a47; /* Ändrad bakgrundsfärg */
+    padding: 40px;
+    background-color: #1e2a47;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
-    color: #f7f7f7;
+    max-width: 1200px;
+    margin: 20px auto;
 }
 
 .character-image {
     width: 100%;
     max-width: 500px;
     border-radius: 10px;
-    margin-top: 20px;
+    margin: 20px 0;
 }
 
+/* === Training Schedule === */
 .training-schedule {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    text-align: center;
-    margin: 0 auto;
     max-width: 1200px;
+    margin: 0 auto;
 }
 
 .day {
@@ -237,7 +125,6 @@ footer {
     padding: 20px;
     border-radius: 8px;
     width: 350px;
-    text-align: center;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
 }
 
@@ -245,6 +132,11 @@ footer {
     color: #ff4500;
     font-size: 1.8rem;
     margin-bottom: 15px;
+}
+
+.day ul {
+    list-style: none;
+    padding: 0;
 }
 
 .day ul li {
@@ -256,6 +148,7 @@ footer {
     color: #ffffff;
 }
 
+/* === Diet Plan === */
 .diet-plan {
     background-color: #292929;
     padding: 20px;
@@ -264,6 +157,11 @@ footer {
     text-align: center;
     width: 80%;
     margin: 20px auto;
+}
+
+.diet-plan ul {
+    list-style: none;
+    padding: 0;
 }
 
 .diet-plan ul li {
@@ -275,11 +173,13 @@ footer {
     color: #ffffff;
 }
 
-/* Specific Styling for "Finisher" Section */
-.finisher {
-    background-color: #ff4500 !important;
-    color: #000 !important;
-    font-weight: bold;
-    padding: 12px;
-    border-radius: 5px;
+/* === Footer === */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
