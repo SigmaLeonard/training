@@ -8,7 +8,7 @@
 
 body {
     margin: 0;
-    padding-top: 100px; /* Default för desktop – uppdateras via media queries */
+    padding-top: 100px; /* Default för desktop */
     background-color: #1e2a47;
     color: #f7f7f7;
     text-align: center;
@@ -78,9 +78,11 @@ body {
 
 /* === Welcome Section === */
 .welcome {
-    padding: 80px 0 50px;
+    margin-top: 120px; /* <-- Fixar texten som hamnar bakom navbar */
+    padding: 50px 0;
     max-width: 1200px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .welcome h1 {
@@ -187,11 +189,6 @@ footer {
     width: 100%;
 }
 
-/* === Spacer if needed === */
-.spacer {
-    height: 60px;
-}
-
 /* === Responsive Design === */
 @media (max-width: 1024px) {
     body {
@@ -212,7 +209,7 @@ footer {
     }
 
     .welcome {
-        padding-top: 140px;
+        margin-top: 140px;
     }
 
     .welcome h1 {
@@ -226,7 +223,7 @@ footer {
 
 @media (max-width: 768px) {
     body {
-        padding-top: 190px;
+        padding-top: 180px;
     }
 
     .navbar {
@@ -246,7 +243,7 @@ footer {
     }
 
     .welcome {
-        padding-top: 200px;
+        margin-top: 180px;
     }
 
     .welcome h1 {
@@ -278,11 +275,11 @@ footer {
 
 @media (max-width: 480px) {
     body {
-        padding-top: 220px;
+        padding-top: 200px;
     }
 
     .welcome {
-        padding-top: 230px;
+        margin-top: 200px;
     }
 
     .menu a {
